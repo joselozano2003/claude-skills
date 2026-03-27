@@ -87,6 +87,8 @@ Extract:
 
 ## Step 3: Generate files
 
+**Default: resume only.** Generate a cover letter ONLY if the user explicitly requests one (e.g. "with cover letter", "cover letter too", "cover letter for this one"). Never generate a cover letter automatically.
+
 Use parallel subagents (one per file) to keep the main context clean.
 
 ### Resume subagent prompt
@@ -182,7 +184,7 @@ STEPS: same as resume pattern
 
 - Show file paths (e.g. `/Users/joselozano2003/Desktop/Resumes/[Company]/[Role]/...`)
 - 2-3 sentence summary of key tailoring decisions
-- If no cover letter was requested, ask once: "Want a cover letter for this one?"
+- Always ask: "Want a cover letter for this one?" — unless the user already requested one in this turn.
 
 ## Context rules
 
